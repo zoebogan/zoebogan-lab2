@@ -11,24 +11,24 @@ public class DotChaser {
    *
    * A STATIC CLASS? OH NO! GET IT OUT OF HERE!
    */
-  public static class Thing {
+ // public static class Thing {
     // dir: 0=North, 1=East, 2=South, 3=West.
     // timeSinceLast: this is only important for "TypeB" Things.
     public int  row, col, dir, timeSinceLast;
     public char lab = 'r';
     public boolean isTypeB;
-  }
-
+ // } 
+  
   /**
    * YOU'LL NEED TO PUT THIS SOMEWHERE ELSE
    * HINT: WOULDN'T IT BE NICE TO HAVE A LIST OR QUEUE SO THAT
    *       WE DON'T HAVE TO USE NODES HERE?
    * This class is for linked lists of Thing's
    */
-  public static class Node {
-    public Thing data;
-    public Node  next;
-  }
+  //public static class Node {
+    //public Thing data;
+    //public Node  next;
+  //}
 
   // EEEEEK! STATIC METHODS!!! PLEASE FIND THEM A BETTER HOME.
   public static void rightTurn(Thing t) {
