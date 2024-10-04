@@ -3,13 +3,11 @@ import java.util.Random;
 
 public class DotChaser {
   public static Random rand = new Random(System.currentTimeMillis());
-
+ 
   public int  row, col, dir, timeSinceLast;
   public char lab;
   public boolean isTypeB;
-  /*
-   * This static method is ok :)
-   */
+
   public static void main(String[] args) {
     int N = 200;
 

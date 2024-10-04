@@ -11,18 +11,14 @@ public class TypeC extends Thing {
     }
     public void maybeTurn(Random rand) {
         timeSinceLast++;
+
         if (timeSinceLast == 5) {
             timeSinceLast = 0;
             int i = rand.nextInt(3);
             if (i == 1) {
                 rightTurn();
-            } 
-            if (i == 4) {
-                leftTurn();
             }
-            if (i == 4) {
-                rightTurn();
-            }
+            step();
         }
     }
 }
