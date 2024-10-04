@@ -4,20 +4,21 @@ import java.util.Random;
 abstract class Thing {
   // dir: 0=North, 1=East, 2=South, 3=West.
   // timeSinceLast: this is only important for "TypeB" Things.
-  protected int  row;
+  protected int row;
   protected int col;
   protected int dir;
   protected int timeSinceLast;
   protected char lab;
   protected boolean isTypeB;
 
-  public static Random rand = new Random(System.currentTimeMillis());
+  protected Random rand = new Random(System.currentTimeMillis());
+  
   public abstract void maybeTurn(Random rand);
   
   public Thing(int row, int col, char lab) {
-    row = row;
-    col = col;
-    lab = lab;
+    this.row = row;
+    this.col = col;
+    this.lab = lab;
   }
 
   public void rightTurn() {

@@ -2,25 +2,27 @@ import java.util.*;
 import java.util.Random;
 
 public class TypeC extends Thing {
-    public static Random rand = new Random(System.currentTimeMillis());
+    protected Random rand = new Random(System.currentTimeMillis());
     private int timeSinceLast;
+
     public TypeC(int row, int col) {
-        super(row, col, 'k'); 
+        super(row, col, 'm'); 
         timeSinceLast = 0;
     }
     public void maybeTurn(Random rand) {
         timeSinceLast++;
-        if (timeSinceLast == 100) {
+        if (timeSinceLast == 5) {
             timeSinceLast = 0;
             int i = rand.nextInt(3);
             if (i == 1) {
                 rightTurn();
-            } else if (i == 2) {
+            } 
+            if (i == 4) {
                 leftTurn();
+            }
+            if (i == 4) {
+                rightTurn();
             }
         }
     }
-    public String toString() {
-    return row + " " + col + " " + lab;
-  }
 }

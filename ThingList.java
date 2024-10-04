@@ -3,7 +3,8 @@ import java.util.Random;
 
 public class ThingList {
   public Node head;
-  public static Random rand = new Random(System.currentTimeMillis());
+  
+  protected Random rand = new Random(System.currentTimeMillis());
   
   private class Node {
     Thing data;
