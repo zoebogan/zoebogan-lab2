@@ -1,12 +1,13 @@
+import java.util.*;
+import java.util.Random;
+
+/*A TypeB Thing
+   * only considers making a random turn every 10th round.
+*/
+public class TypeB extends Thing {
 
 
-     // Add a typeB thing to the list
-        Thing tB = new Thing();
-        tB.row     = 55;
-        tB.col     = 50;
-        tB.lab     = 'b';
-        tB.isTypeB = true;
-        Node nB = new Node();
-        nB.data = tB;
-        nB.next = L;
-        L       = nB;
+    public void maybeTurn(Random rand) {
+     
+    }
+}

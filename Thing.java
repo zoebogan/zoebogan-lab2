@@ -1,65 +1,40 @@
-public static class Thing {
-    // dir: 0=North, 1=East, 2=South, 3=West.
-    // timeSinceLast: this is only important for "TypeB" Things.
-    public int  row, col, dir, timeSinceLast;
-    public char lab = 'r';
-    public boolean isTypeB;
+import java.util.*;
+import java.util.Random;
+
+abstract class Thing {
+  // dir: 0=North, 1=East, 2=South, 3=West.
+  // timeSinceLast: this is only important for "TypeB" Things.
+  protected int  row;
+  protected int col;
+  protected int dir;
+  protected int timeSinceLast;
+  protected char lab;
+  protected boolean isTypeB;
+
+  //public static Random rand = new Random(System.currentTimeMillis());
+  public abstract void maybeTurn(Random rand);
+  
+  public Thing(int row, int col, char lab) {
+    row = row;
+    col = col;
+    lab = 'r';
   }
 
-  /**
-   * YOU'LL NEED TO PUT THIS SOMEWHERE ELSE
-   * HINT: WOULDN'T IT BE NICE TO HAVE A LIST OR QUEUE SO THAT
-   *       WE DON'T HAVE TO USE NODES HERE?
-   * This class is for linked lists of Thing's
-   */
-  public static class Node {
-    public Thing data;
-    public Node  next;
+  public void rightTurn() {
+    dir = (dir + 1) % 4;
   }
 
-  // EEEEEK! STATIC METHODS!!! PLEASE FIND THEM A BETTER HOME.
-  public static void rightTurn(Thing t) {
-    t.dir = (t.dir + 1) % 4;
+  public void leftTurn() {
+    dir = (dir + 3) % 4;
+  }
+ 
+  public void step() {
+    final int[] dc = {0, 1, 0, -1}, dr = {1, 0, -1, 0};
+    row += dr[dir];
+    col += dc[dir];
   }
 
-  public static void leftTurn(Thing t) {
-    t.dir = (t.dir + 3) % 4;
+  public String toString() {
+    return row + " " + col + " " + lab;
   }
-
-  public static void maybeTurn(Thing t) {
-    int i = rand.nextInt(3);
-
-    if (t.isTypeB) {
-      t.timeSinceLast++;
-
-      if (t.timeSinceLast == 10) {
-        t.timeSinceLast = 0;
-
-        if (i == 1) {
-          rightTurn(t);
-        }
-
-        if (i == 2) {
-          leftTurn(t);
-        }
-      }
-    } else   {
-      if (i == 1) {
-        rightTurn(t);
-      }
-
-      if (i == 2) {
-        leftTurn(t);
-      }
-    }
-  }
-
-  public static void step(Thing t) {
-    final int[] dc = {
-      0, 1, 0, -1
-    }, dr = {
-      1, 0, -1, 0
-    };
-    t.row += dr[t.dir];
-    t.col += dc[t.dir];
-  }
+}

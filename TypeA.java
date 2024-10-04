@@ -1,11 +1,17 @@
-//inherits thing and thinglist
+import java.util.*;
+import java.util.Random;
 
-  // Add a typeA thing to the list.
-        // (GEE, THAT'S A LOT OF CODE FOR JUST CREATING ONE THING)
-        Thing tA = new Thing();
-        tA.row = 45;
-        tA.col = 50;
-        Node nA = new Node();
-        nA.data = tA;
-        nA.next = L;
-        L       = nA;
+/*A TypeA Thing randomly
+   * decides to turn left or right (or not turn) every "round",
+   * and, afterward, takes a step forward. 
+*/
+//inherits thing and thinglist
+public class TypeA extends Thing {
+
+  
+
+    public void maybeTurn(Random rand) {
+      
+    }
+
+}
