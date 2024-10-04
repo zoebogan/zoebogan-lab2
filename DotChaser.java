@@ -5,7 +5,7 @@ public class DotChaser {
   public static Random rand = new Random(System.currentTimeMillis());
 
   public int  row, col, dir, timeSinceLast;
-  public char lab = 'r';
+  public char lab;
   public boolean isTypeB;
   /*
    * This static method is ok :)

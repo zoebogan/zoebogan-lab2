@@ -10,8 +10,8 @@ public class ThingList {
     Node next;
     
     Node(Thing data) {
-        data = data;
-        next = null;
+        this.data = data;
+        this.next = null;
     }
   }
  
@@ -36,7 +36,7 @@ public class ThingList {
     System.out.println("done");
     System.out.flush();
   }
-  
+
   public void moveAll(Random rand) {
     for (Node index = head; index != null; index = index.next) {
         index.data.maybeTurn(rand);

@@ -7,11 +7,20 @@ import java.util.Random;
 */
 //inherits thing and thinglist
 public class TypeA extends Thing {
-
-  
-
-    public void maybeTurn(Random rand) {
-      
+    public TypeA (int row, int col) {
+        super(row, col, 'r'); 
     }
 
+    public void maybeTurn(Random rand) {
+        int i = rand.nextInt(3);
+        if (i == 1) {
+            rightTurn();
+        } else if (i == 2) {
+            leftTurn();
+        }
+    }
+
+    public String toString() {
+    return row + " " + col + " " + lab;
+  }
 }

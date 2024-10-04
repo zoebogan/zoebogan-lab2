@@ -11,13 +11,13 @@ abstract class Thing {
   protected char lab;
   protected boolean isTypeB;
 
-  //public static Random rand = new Random(System.currentTimeMillis());
+  public static Random rand = new Random(System.currentTimeMillis());
   public abstract void maybeTurn(Random rand);
   
   public Thing(int row, int col, char lab) {
     row = row;
     col = col;
-    lab = 'r';
+    lab = lab;
   }
 
   public void rightTurn() {
