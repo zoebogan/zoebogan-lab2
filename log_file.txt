@@ -1,0 +1,47 @@
+commit 30130c257efb5e3e550e02f70b876d0fcf2b4370
+Author: zoebogan <zoe.bogan@gwu.edu>
+Date:   Fri Oct 4 17:20:24 2024 -0400
+
+    final commit
+
+commit a4f1b40db302259afef637e5f95dc3573b21a027
+Author: zoebogan <zoe.bogan@gwu.edu>
+Date:   Fri Oct 4 15:29:59 2024 -0400
+
+    saving progress on TypeC
+
+commit b2ab0ad3c9db2e0a0774922825ce320529211917
+Author: zoebogan <zoe.bogan@gwu.edu>
+Date:   Fri Oct 4 14:06:56 2024 -0400
+
+    passed test cases, working on TypeC movement
+
+commit caa413cca4bdf06c225f649378d2e4ded694ae27
+Author: zoebogan <zoe.bogan@gwu.edu>
+Date:   Fri Oct 4 13:27:23 2024 -0400
+
+    completed TypeA, TypeB, TypeC but not passing test 3
+
+commit 9bd21bebc36855c5e406aec9fd5b056bef2b4f2e
+Author: zoebogan <zoe.bogan@gwu.edu>
+Date:   Fri Oct 4 13:09:03 2024 -0400
+
+    completed ThingList
+
+commit 3a41ff977416511f02095ab0b98319da1259a1e9
+Author: zoebogan <zoe.bogan@gwu.edu>
+Date:   Fri Oct 4 13:01:43 2024 -0400
+
+    dotchaser and thing rewritten in OOP format
+
+commit 3a528385c5cdf546245eef06a471cf0f878f038f
+Author: zoebogan <zoe.bogan@gwu.edu>
+Date:   Wed Oct 2 16:18:14 2024 -0400
+
+    Working on placement on code in other files
+
+commit 8a901e7400e85fb9c9e79e6852082dfb1e05cab7
+Author: zoebogan <zoe.bogan@gwu.edu>
+Date:   Mon Sep 30 07:59:57 2024 -0400
+
+    intial commit

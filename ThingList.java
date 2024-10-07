@@ -22,11 +22,13 @@ public class ThingList {
           head = insertNode;
       } else {
           Node index = head;
-          while (index.next != null) {
+          while (index.next != null) { 
+              index.next = insertNode; 
+              insertNode.next = null;
               index = index.next;
           }
-          index.next = insertNode; 
-          insertNode.next = null;
+          
+          index = index.next;
       }
   }
 

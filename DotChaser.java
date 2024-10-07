@@ -27,7 +27,7 @@ public class DotChaser {
 
       list.printAll();
       list.moveAll(rand);
-      count++;  
+      count++;
 
     }
   }
